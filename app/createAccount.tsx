@@ -17,7 +17,8 @@ export default function CreateAccountScreen() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [role,setRole] = useState('user')
+  const [role,setRole] = useState('user');
+  const [vehicle,setVehicle] = useState([])
   const router = useRouter();
 
   const handleCreateAccount = async () => {
@@ -38,6 +39,7 @@ export default function CreateAccountScreen() {
         organization,
         email,
         role,
+        vehicle,
         createdAt: new Date().toISOString(),
       });
 
